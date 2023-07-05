@@ -1,7 +1,7 @@
 import useStyles from "./OpinionDetail.styles";
 import product from "../../../../assets/img/product.svg";
 import Score from "../Score/Score";
-import product from '../../../../mockedData/mock-filter-opinion.json';
+
 
 const OpinionDetail = ({opinion,onChangeOpinion,rating}) => {
     const classes = useStyles();
@@ -54,7 +54,7 @@ const OpinionDetail = ({opinion,onChangeOpinion,rating}) => {
                 <div className = {classes.blockDescription}>
                     <p className = {classes.titleDescription}>Description</p>
                     <p className = {classes.textDescription}>
-                        {product.detail}
+                        Lorem ipsum dolor sit amet,   consectetur adipiscing elit. Integer ullamcorper, tellus at aliquam mollis, mi lorem pretium turpis, sed facilisis nisi elit vitae dui. Suspendisse at feugiat ligula. Ut feugiat leo sed risus tempor dignissim
                     </p>
 
                 </div>

@@ -1,5 +1,5 @@
-import { makeStyles } from "@material-ui/core";
-import mq from "../../../config/mq.js";
+import { makeStyles } from '@material-ui/core';
+import mq from '../../../config/mq.js';
 const useStyles = makeStyles((theme) => ({
     wrapper:{
         display: "flex",

@@ -2,10 +2,10 @@ import OpinionDetail from './OpinionDetail/OpinionDetail';
 import OpinionEdit from './OpinionEdit/OpinionEdit';
 import { useState } from 'react';
 import useStyles from './OpinionDetailEdit.styles';
-import product from '../../../mockedData/mock-filter-opinion.json';
+
 const OpinionDetailEdit = () => {
     const classes = useStyles();
-    const [rating, setRating] = useState(product.score);
+    const [rating, setRating] = useState(4);
     const handlechangeRating = (newRating) => {
         setRating(newRating);
     }
