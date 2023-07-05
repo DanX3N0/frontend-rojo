@@ -10,17 +10,17 @@ export const FormControlStock = () => {
         
         <FormGroup sx={StylesFormGroupStock}>
         <FormLabel><CustomTypographySub subtitle={"Stock"}/></FormLabel>
-          <FormControlLabel control={<BpCheckbox name="disponible" checked/>} label={
-              <Typography variant="subtitle1" sx={{...DefaultTypographyItem,color:'secondary.main',width:'71px'}}>
+          <FormControlLabel control={<BpCheckbox name="disponible"/>} label={
+              <Typography variant="subtitle1" sx={{...DefaultTypographyItem,color:'filter.fLabel',width:'71px'}}>
                 Disponible
               </Typography>} 
-          sx={{...defaultStyleFormItem,width:'99px'}}
+          sx={{...defaultStyleFormItem}}
           />
           <FormControlLabel control={<BpCheckbox  name="agotado" />}label={
               <Typography variant="subtitle1" sx={{...DefaultTypographyItem,color:'filter.fLabel',width:'58px'}}>
                 Agotado
               </Typography>} 
-          sx={{...defaultStyleFormItem,width:'86px'}}/>
+          sx={{...defaultStyleFormItem}}/>
         </FormGroup>
       </FormControl>
       

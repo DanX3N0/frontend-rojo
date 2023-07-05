@@ -2,7 +2,7 @@ import { styled } from '@mui/system'
 import {Stack,Slider,Input} from '@mui/material'
 
 export const CustomSlider = styled(Slider)(({ theme }) => ({
-    color:theme.palette.secondary.main,
+    color:theme.palette.common.black,
     width:'165.112px',
     height: '1.436px',
     '& .MuiSlider-track': {
@@ -12,7 +12,7 @@ export const CustomSlider = styled(Slider)(({ theme }) => ({
     '& .MuiSlider-thumb': {
       height: '15.792px',
       width: '15.792px',
-      backgroundColor:theme.palette.secondary.main,
+      backgroundColor:theme.palette.common.black,
       border: 'none',
     },
   }));

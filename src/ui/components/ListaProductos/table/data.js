@@ -5,8 +5,8 @@ export const rows = [
     product: {
       image:'/src/assets/images/avatarImage1.jpg',
       description: {
-        title: "Lorem ipsum",
-        detail: "Esto es la descripcion del producto 1",
+        title: 'Lorem ipsum',
+        detail: 'Esto es la descripcion del producto 1',
       },
     },
     stock: 10,
@@ -17,23 +17,23 @@ export const rows = [
     product: {
       image: '../../src/assets/images/Image2.jpg',
       description: {
-        title: "Lorem ipsum",
-        detail: "Esto es la descripcion del producto 2",
+        title: 'Lorem ipsum',
+        detail: 'Esto es la descripcion del producto 2',
       },
     },
     stock: 5,
-    price: "$14.99",
+    price: '$14.99',
   },
   {
     id: 1150,
     product: {
-      image: "../../src/assets/images/Image3.jpg",
+      image: '../../src/assets/images/Image3.jpg',
       description: {
-        title: "Lorem ipsum",
-        detail: "Esto es la descripcion del producto 3",
+        title: 'Lorem ipsum',
+        detail: 'Esto es la descripcion del producto 3',
       },
     },
     stock: 2,
-    price: "$19.99",
+    price: '$19.99',
   },
 ];

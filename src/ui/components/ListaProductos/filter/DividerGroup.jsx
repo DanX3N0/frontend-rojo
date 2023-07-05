@@ -9,11 +9,9 @@ const StyledDivider = styled(Divider)(({ theme }) => ({
     position:'absolute',
     left:'19px',
     backgroundColor:theme.palette.filter.divider,
-    
   }));
 
-function DividerGroup(props) {
+const DividerGroup=(props)=>{
     return <StyledDivider {...props} />;
   }
-  
   export default DividerGroup;

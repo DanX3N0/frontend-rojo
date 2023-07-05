@@ -26,11 +26,10 @@ export const StylesTable={
   
 export const StyledTableCellHead = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-      backgroundColor:theme.palette.table.headBackground,
+      backgroundColor:theme.palette.secondary.light,
       height:'43px',
       paddingLeft:0,
-      color:theme.palette.secondary.main,
-      
+      color:theme.palette.common.black,
     },
     '&:first-of-type': {
       borderTopLeftRadius: '6px',

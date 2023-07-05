@@ -1,7 +1,7 @@
 import React from 'react'
 import {Typography,Stack,FormLabel} from '@mui/material'
-import {StyledContainerFilt,StylesLayoutTitle,StyledTitleFilt,StyledGroupFilt} from "./stylesFilter"
-import FilterIcon from "../icons/FilterIcon"
+import {StyledContainerFilt,StylesLayoutTitle,StyledTitleFilt,StyledGroupFilt} from './stylesFilter'
+import FilterIcon from '../icons/FilterIcon'
 import CustomTypographySub from './CustomTypography'
 import FormControlCategory from './FormControlCategory'
 import FormControlMatter from './FormControlMatter'
@@ -25,7 +25,7 @@ export default function FilterComponents() {
         <FormControlCategory/>
         <FormControlMatter/>
         <FormControlStock/>
-        <FormLabel><CustomTypographySub subtitle={"Cantidad"}/></FormLabel>
+        <FormLabel><CustomTypographySub subtitle={'Cantidad'}/></FormLabel>
       </StyledGroupFilt>
       <InputSlider/>
     </StyledContainerFilt>

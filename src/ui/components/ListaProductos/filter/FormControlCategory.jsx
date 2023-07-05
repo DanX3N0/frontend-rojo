@@ -9,22 +9,22 @@ export const FormControlCategory = () => {
     <FormControl component="fieldset" variant="standard">
         <FormGroup sx={StylesFormGroupCategory}>
         <FormLabel><CustomTypographySub subtitle={"Categoria"}/></FormLabel>
-          <FormControlLabel control={<BpCheckbox name="mujer" checked/>} label={
-              <Typography  sx={{...DefaultTypographyItem,color:'secondary.main',width:'38px'}}>
+          <FormControlLabel control={<BpCheckbox name="mujer"/>} label={
+              <Typography  sx={{...DefaultTypographyItem, color:'filter.fLabel',width:'38px'}}>
                 Mujer
               </Typography>} 
-          sx={{...defaultStyleFormItem,width:'66px'}}
+          sx={{...defaultStyleFormItem}}
           />
           <FormControlLabel control={<BpCheckbox  name="hombre" />}label={
               <Typography sx={{...DefaultTypographyItem,color:'filter.fLabel',width:'54px'}}>
                 Hombre
               </Typography>} 
-          sx={{...defaultStyleFormItem,width:'82px'}}/>
+          sx={{...defaultStyleFormItem}}/>
           <FormControlLabel control={<BpCheckbox name="todos" />}label={
               <Typography  sx={{...DefaultTypographyItem,color:'filter.fLabel',width:'42px'}}>
                 Todos
             </Typography>}
-          sx={{...defaultStyleFormItem,width:'70px'}}/>
+          sx={{...defaultStyleFormItem}}/>
         </FormGroup>
       </FormControl>
       

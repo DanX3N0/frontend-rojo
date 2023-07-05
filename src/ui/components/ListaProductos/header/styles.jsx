@@ -1,5 +1,5 @@
 import { styled } from '@mui/system';
-import {Button,Box,InputBase,AppBar} from '@mui/material';
+import {Button,InputBase,AppBar} from '@mui/material';
 
 export const StyledButton = styled(Button)(({ theme }) => ({
   display: 'flex',
@@ -12,32 +12,8 @@ export const StyledButton = styled(Button)(({ theme }) => ({
   left: 705,
   top: 4.5,
   padding: 15,
-  backgroundColor: theme.palette.secondary.main,
+  backgroundColor: theme.palette.common.black,
 }));
-
-export const UserInfoBox = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  alignItems: 'center',
-  padding: '0px 9.75px',
-  backgroundColor: theme.palette.primary.main,
-  gap: 14,
-  position: 'absolute',
-  width: 216.53,
-  height: 58,
-  left: 934.47,
-  top: 0,
-}));
-
-export const StyledUserData = styled(Box)({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'flex-start',
-  width: '125.03px',
-  height: '28.71px',
-  gap: '7px',
-});
 
 export const Search = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -52,7 +28,7 @@ export const Search = styled('div')(({ theme }) => ({
   borderRadius: '22px',
   border: `1px solid ${theme.palette.header.search}`,
   boxSizing:'border-box',
-  background:theme.palette.primary.main
+  background:theme.palette.common.white
 }));
 
 export const SearchIconWrapper = styled('div')({
@@ -71,7 +47,7 @@ export const StyledInputBaseSearch = styled(InputBase)(({ theme }) => ({
   position:'absolute',
   top:'15px',
   left:'33px',
-  color:theme.palette.header.searchLabel,
+  color:theme.palette.header.search,
 }));
 
 export const StyledBarHeader = styled(AppBar)(({ theme }) => ({
@@ -86,7 +62,7 @@ export const StyledBarHeader = styled(AppBar)(({ theme }) => ({
   position: 'absolute',
   left: '224px',
   top: '0px',
-  background: theme.palette.primary.main,
+  background:theme.palette.primary.main,
   boxShadow:'none'
 }));
 export const StylesToolbar={
