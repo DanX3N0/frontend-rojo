@@ -1,9 +1,10 @@
-import Theme from "./Theme/Theme";
-import NavMenu from "./ui/components/navMenu/NavMenu";
+import Theme from './Theme/Theme';
+import TableComponent from './ui/components/listClients/TableComponent';
+
 function App() {
   return (
     <Theme>
-      <NavMenu />
+      <TableComponent/>
     </Theme>
   );
 }

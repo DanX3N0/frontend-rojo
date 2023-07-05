@@ -1,6 +1,7 @@
 import { createTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
 import Inter from "../assets/fonts/Inter-Regular.ttf";
 import Poppins from "../assets/fonts/Poppins-Regular.ttf";
+import AllertaStencil from "../assets/fonts/AllertaStencil-Regular.ttf"
 const InterRegular = {
   fontFamily: "Inter-Regular",
   fontStyle: "normal",
@@ -26,6 +27,18 @@ const PoppinsBold = {
   fontWeight: 700,
   src: `url(${Poppins})`,
 };
+const AllertaStencilRegular = {
+  fontFamily: "AllertaStencil-Regular",
+  fontStyle: "normal",
+  fontWeight: 100,
+  src: `url(${AllertaStencil})`,
+};
+const AllertaStencilBold = {
+  fontFamily: "AllertaStencil-Bold",
+  fontStyle: "normal",
+  fontWeight: 700,
+  src: `url(${AllertaStencil})`,
+};
 const theme = createTheme({
   typography: {
     fontFamily: [
@@ -33,6 +46,8 @@ const theme = createTheme({
       InterBold.fontFamily,
       PoppinsRegular.fontFamily,
       PoppinsBold.fontFamily,
+      AllertaStencilRegular.fontFamily,
+      AllertaStencilBold.fontFamily,
     ].join(","),
   },
   palette: {
@@ -56,7 +71,7 @@ const theme = createTheme({
   overrides: {
     MuiCssBaseline: {
       "@global": {
-        "@font-face": [PoppinsRegular, PoppinsBold, InterRegular, InterBold],
+        "@font-face": [PoppinsRegular, PoppinsBold, InterRegular, InterBold, AllertaStencilRegular, AllertaStencilBold],
       },
       body: {
         fontFamily: ["PoppinsRegular"],
