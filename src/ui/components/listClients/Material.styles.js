@@ -25,16 +25,6 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: 'auto',
       paddingTop: '5px',
    },
-   checks: {
-      paddingVertical: '5px',
-      paddingTop: '5px',
-      paddingBottom: '5px',
-   },
-   check: {
-      '&:checked': {
-         backgroundColor: 'black',
-      }
-   },
    material: {
       [mq('xxs')]: {
          width: '100%',
