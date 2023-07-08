@@ -11,11 +11,11 @@ function App() {
          <AddAndSearch />
          <div className={classes.wrapper}>
             <NavMenu />
-            <div className={classes.hiden}>
+            <div className={classes.filter}>
                <FilterBar />
             </div>
             <ListClients />
-            <div className={classes.hiden2}>
+            <div className={classes.secondFilter}>
                <FilterBar />
             </div>
          </div>

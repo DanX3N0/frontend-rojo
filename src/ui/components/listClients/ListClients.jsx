@@ -1,12 +1,10 @@
 import Pencil from './img/icon-edit.png';
 import Delete from './img/icon-delete.png';
 import useStyles from './ListClients.styles';
-import data from './mock-users.json';
+import users from '../../../mockedData/mock-users.json';
 
 const ListClients = () => {
    const classes = useStyles();
-   const users = data;
-
    return (
       <div className={classes.wrapper}>
          <div className={classes.tittleTable}>
@@ -38,7 +36,7 @@ const ListClients = () => {
             <tbody className={classes.tableBody}>
                {users.map((user) => (
                   <tr className={classes.bodyRow}>
-                     <td>
+                     <td className={classes.id}>
                         {user.id}
                      </td>
                      <td>

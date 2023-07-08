@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '24px',
       fontWeight: '600',
       alignItems: 'center',
-      borderBottom: '1px solid #BCBCBC',
+      borderBottom: `1px solid ${theme.palette.secondary.dark}`,
       margin: '7px',
       padding: '10px',
    },

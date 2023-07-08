@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
          width: '100%',
       },
       paddingLeft: '5px',
-      borderBottom: '1px solid #BCBCBC',
+      borderBottom: `1px solid ${theme.palette.secondary.dark}`,
    },
    tittle:{
       fontSize: '16px',
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
    },
    check:{
       '&:checked': {
-         backgroundColor: 'black',
+         backgroundColor: theme.palette.common.black,
       }
    },
 }));

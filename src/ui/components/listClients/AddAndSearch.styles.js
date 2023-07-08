@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft: '5%',
       paddingRight:'7%',
    },
-   lupa:{
+   magnifier:{
       width: '10%',
    },
    searchForm:{
@@ -36,14 +36,15 @@ const useStyles = makeStyles((theme) => ({
       },
       [mq('md')]: {
          display: 'flex',
-         marginRight: 'calc(40% - 200px)',
+         marginRight: 'calc(50% - 262px)',
          width: '262px',
       },
       padding: '10px',
       flexDirection: 'row',
       height: ' 45px',
-      border: '1px solid #BFBFBF',
+      border: '1px solid',
       borderRadius: '22px',
+      opacity: '50%',
    },
    textAreaWidth:{
       width: '70%',
@@ -55,9 +56,6 @@ const useStyles = makeStyles((theme) => ({
       height: '21px',
       outline: 'none',
       resize: 'none',
-      '&::placeholder':{
-         color: '#BFBFBF',
-      },
    },
    addButton:{
       [mq('xxs')]: {
@@ -66,17 +64,17 @@ const useStyles = makeStyles((theme) => ({
       [mq('md')]: {
          display: 'flex',
       },
-      color: '#FFFFFF',
+      color: theme.palette.primary.main,
       width: '198px',
       height: '46px',
       display: 'flex',
       flexDirection: 'row',
-      backgroundColor: '#000000',
+      backgroundColor: theme.palette.common.black,
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: '6px',
    },
-   imgAdd:{
+   imageAdd:{
       paddingRight: '3%',
    },
    user:{
@@ -95,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
          display: 'none',
       },
       [mq('md')]: {
-         display: 'block',
+         display: 'flex',
       },
       display: 'flex',
       flexDirection: 'column',
@@ -121,46 +119,41 @@ const useStyles = makeStyles((theme) => ({
       },
       backgroundColor: theme.palette.primary.main,
    },
-   lupa2:{
+   secondMagnifier:{
       width: '10%',
    },
-   searchForm2:{
+   secondSearchForm:{
       padding: '10px',
       display: 'flex',
       flexDirection: 'row',
       width: 'calc(262 + 80% - 200px)',
       height: ' 45px',
-      border: '1px solid #BFBFBF',
+      border: '1px solid',
       borderRadius: '22px',
       marginLeft: '2%',
       marginRight: '10%',
+      opacity : '60%',
    },
-   textAreaWidth2:{
-      width: '70%',
-      height: '21px',
-   },
-   textArea2:{
+   secondTextArea:{
       border: 'none',
       width:'100%',
       height: '21px',
       outline: 'none',
       resize: 'none',
-      '&::placeholder':{
-         color: '#BFBFBF',
-      },
+      
    },
-   addButton2:{
-      color: '#FFFFFF',
+   secondAddButton:{
+      color: theme.palette.primary.main,
       width: '100%',
       height: '46px',
       display: 'flex',
       flexDirection: 'row',
-      backgroundColor: '#000000',
+      backgroundColor: theme.palette.common.black,
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: '6px',
    },
-   buttonHidden:{
+   secondButton:{
       marginRight: '5%',
    },
 }));

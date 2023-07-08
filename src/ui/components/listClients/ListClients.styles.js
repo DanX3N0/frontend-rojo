@@ -21,9 +21,11 @@ const useStyles = makeStyles((theme) => ({
       margin: '20px',
       marginInline: '40px',
     },
+    color: theme.palette.tertiary.dark,
   },
   tittleTable:{
     paddingLeft: '5%',
+    color: theme.palette.tertiary.dark,
   },
   table:{
     borderCollapse: 'collapse',
@@ -40,14 +42,17 @@ const useStyles = makeStyles((theme) => ({
   tableHead:{
     height: '43px',
     borderRadius: '6px',
-    backgroundColor: '#F3F6F9',
+    backgroundColor: theme.palette.tertiary.main,
   },
   tableBody:{
     textAlign: 'center',
   },
+  id: {
+    opacity: '60%',
+  },
   bodyRow:{
-    borderBottom: '1px solid #CDCDCD',
-    padding: '1px',
+    borderBottom: `1px solid ${theme.palette.secondary.dark}`,
+    width: '100%',
     height: '57.5px',
   },
   buttons:{

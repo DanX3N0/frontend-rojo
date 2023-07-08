@@ -1,7 +1,7 @@
 import useStyles from './AddAndSearch.styles';
-import Lupa from './img/lupa.png';
-import AddClient from './img/add-client.png';
-import Avatar from './img/avatar.png';
+import MagnifierIcon from './img/magnifier.png';
+import AddClientIcon from './img/add-client.png';
+import AvatarIcon from './img/avatar.png';
 
 const AddAndSearch = () => {
    const classes = useStyles();
@@ -10,8 +10,8 @@ const AddAndSearch = () => {
          <div className={classes.wrapper}>
             <p className={classes.logo}>Frasier</p>
             <div className={classes.searchForm}>
-               <div className={classes.lupa}>
-                  <img src={Lupa} alt='lupa' />
+               <div className={classes.magnifier}>
+                  <img src={MagnifierIcon} alt='magnifierIcon' />
                </div>
                <div className={classes.textAreaWidth}>
                   <textarea className={classes.textArea} placeholder='Buscar'>
@@ -20,13 +20,13 @@ const AddAndSearch = () => {
             </div>
             <div>
                <button className={classes.addButton}>
-                  <img className={classes.imgAdd} src={AddClient} alt='add-client' />
+                  <img className={classes.imageAdd} src={AddClientIcon} alt='addClientIcon' />
                   <p>Agregar Cliente</p>
                </button>
             </div>
             <div className={classes.user}>
                <div className={classes.avatar}>
-                  <img src={Avatar} alt='avatar' />
+                  <img src={AvatarIcon} alt='avatarIcon' />
                </div>
                <div className={classes.hamburger}>
                   <span></span>
@@ -40,18 +40,18 @@ const AddAndSearch = () => {
             </div>
          </div>
          <div className={classes.hidden}>
-            <div className={classes.searchForm2}>
-               <div className={classes.lupa2}>
-                  <img src={Lupa} alt='lupa' />
+            <div className={classes.secondSearchForm}>
+               <div className={classes.secondMagnifier}>
+                  <img src={MagnifierIcon} alt='magnifierIcon' />
                </div>
-               <div className={classes.textAreaWidth2}>
-                  <textarea className={classes.textArea2} placeholder='Buscar'>
+               <div className={classes.secondTextArea}>
+                  <textarea className={classes.secondTextArea} placeholder='Buscar'>
                   </textarea>
                </div>
             </div>
-            <div className={classes.buttonHidden}>
-               <button className={classes.addButton2}>
-                  <img className={classes.imgAdd2} src={AddClient} alt='add-client' />
+            <div className={classes.secondButton}>
+               <button className={classes.secondAddButton}>
+                  <img className={classes.secondImageAdd} src={AddClientIcon} alt='addClientIcon' />
                   <p>Agregar Cliente</p>
                </button>
             </div>

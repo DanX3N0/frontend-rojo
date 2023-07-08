@@ -3,7 +3,7 @@ import mq from '../src/config/mq';
 
 const useStyles = makeStyles((theme) => ({
    wrapper: {
-      backgroundColor: '#F1F0F0',
+      backgroundColor: theme.palette.primary.main,
       fontFamily: 'Inter-Regular',
       [mq('xxs')]: {
          width: '100%',
@@ -17,23 +17,6 @@ const useStyles = makeStyles((theme) => ({
          flexDirection: 'row',
          alignItems: 'center',
          paddingLeft: '10px',
-      },
-   },
-   hiden: {
-      [mq('xxs')]: {
-         width: '100%',
-         display: 'block',
-      },
-      [mq('md')]: {
-         display: 'none',
-      },
-   },
-   hiden2: {
-      [mq('xxs')]: {
-         display: 'none',
-      },
-      [mq('md')]: {
-         display: 'block',
       },
    },
 }));

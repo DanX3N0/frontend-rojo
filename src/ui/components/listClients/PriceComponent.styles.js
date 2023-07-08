@@ -11,11 +11,9 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Inter-Regular",
       [mq("xxs")]: {
          width: "100%",
-         borderBottom: '1px solid #BCBCBC',
       },
       [mq("md")]: {
          width: "100%",
-         borderBottom: '1px solid white',
       },
    },
    tittle: {

@@ -3,35 +3,9 @@ import ChecksComponent from './ChecksComponent';
 import PriceComponent from './PriceComponent';
 import FilterIcon from './img/filter-icon.png';
 import Material from './Material';
+import data from '../../../mockedData/mock-filter-data.json';
 
 const FilterBar = () => {
-   const data = {
-      category: {
-         tittle: 'Categoria',
-         labels: [
-            'Mujer',
-            'Hombre',
-            'Todos',
-         ],
-      },
-      material: {
-         tittle: 'Material',
-         labels: [
-            'Metals',
-            'Plastic',
-            'Glass',
-            'Ceramic',
-            'Minerals',
-         ],
-      },
-      stock: {
-         tittle: 'Stock',
-         labels: [
-            'Disponible',
-            'Agotado',
-         ],
-      },
-   };
 
    const classes = useStyles();
    return (
