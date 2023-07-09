@@ -1,34 +1,91 @@
-import React from 'react'
-import { FormControl,FormLabel,FormGroup,FormControlLabel,Typography,Divider} from '@mui/material'
+import {useState} from 'react'
+import { FormControl,FormLabel,FormGroup,FormControlLabel,Typography} from '@mui/material'
 import BpCheckbox from './BpCheckedIcon'
 import CustomTypographySub from './CustomTypography'
-import {defaultStyleFormItem ,DefaultTypographyItem,StylesFormGroupCategory} from './stylesFilter'
+import {defaultStyleFormItem ,StylesFormGroupCategory,DefaultTypographyItem} from './stylesFilter'
 
 export const FormControlCategory = () => {
+  const [checkboxes, setCheckboxes] = useState({
+    checkbox1: false,
+    checkbox2: false,
+    checkbox3: false,
+  });
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+    setCheckboxes((prevState) => ({
+      ...prevState,
+      [name]: checked,
+    }));
+  };
+ 
   return (
     <FormControl component="fieldset" variant="standard">
-        <FormGroup sx={StylesFormGroupCategory}>
-        <FormLabel><CustomTypographySub subtitle={"Categoria"}/></FormLabel>
-          <FormControlLabel control={<BpCheckbox name="mujer"/>} label={
-              <Typography  sx={{...DefaultTypographyItem, color:'filter.fLabel',width:'38px'}}>
-                Mujer
-              </Typography>} 
-          sx={{...defaultStyleFormItem}}
-          />
-          <FormControlLabel control={<BpCheckbox  name="hombre" />}label={
-              <Typography sx={{...DefaultTypographyItem,color:'filter.fLabel',width:'54px'}}>
-                Hombre
-              </Typography>} 
-          sx={{...defaultStyleFormItem}}/>
-          <FormControlLabel control={<BpCheckbox name="todos" />}label={
-              <Typography  sx={{...DefaultTypographyItem,color:'filter.fLabel',width:'42px'}}>
-                Todos
-            </Typography>}
-          sx={{...defaultStyleFormItem}}/>
-        </FormGroup>
-      </FormControl>
-      
-  )
+      <FormGroup sx={StylesFormGroupCategory}>
+        <FormLabel>
+          <CustomTypographySub subtitle={"Categoria"} />
+        </FormLabel>
+        <FormControlLabel
+          control={
+            <BpCheckbox
+              name="checkbox1"
+              checked={checkboxes.checkbox1}
+              onChange={handleCheckboxChange}
+            />
+          }
+          label={
+            <Typography
+              sx={{
+                ...DefaultTypographyItem,
+                color: checkboxes.checkbox1 ? "#000" : "filter.fLabel",
+              }}
+            >
+              Mujer
+            </Typography>
+          }
+          sx={{ ...defaultStyleFormItem }}
+        />
+        <FormControlLabel
+          control={
+            <BpCheckbox
+              name="checkbox2"
+              checked={checkboxes.checkbox2}
+              onChange={handleCheckboxChange}
+            />
+          }
+          label={
+            <Typography
+              sx={{
+                ...DefaultTypographyItem,
+                color: checkboxes.checkbox2 ? "#000" : "filter.fLabel",
+              }}
+            >
+              Hombre
+            </Typography>
+          }
+          sx={{ ...defaultStyleFormItem }}
+        />
+        <FormControlLabel
+          control={
+            <BpCheckbox
+              name="checkbox3"
+              checked={checkboxes.checkbox3}
+              onChange={handleCheckboxChange}
+            />
+          }
+          label={
+            <Typography
+              sx={{
+                ...DefaultTypographyItem,
+                color: checkboxes.checkbox3 ? "#000" : "filter.fLabel",
+              }}
+            >
+              Todos
+            </Typography>
+          }
+          sx={{ ...defaultStyleFormItem }}
+        />
+      </FormGroup>
+    </FormControl>
+  );
 }
-
-export default FormControlCategory;
+  export default FormControlCategory

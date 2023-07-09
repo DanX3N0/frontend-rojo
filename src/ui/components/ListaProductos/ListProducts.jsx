@@ -8,7 +8,7 @@ import FilterComponent from "./filter/FilterComponent"
 const ListProducts = () => {
   const theme = useTheme();
   return (
-      <Container sx={{width:'1440px',height:'1024px',background:theme.palette.body.main}}>
+      <Container sx={{width:'1440px',height:'1024px',background:theme.palette.body.main}} maxWidth="xl">
             <Header/>
             <SideNavbar/>
             <FilterComponent/>

@@ -59,7 +59,7 @@ export const defaultStyleFormItem = {
     margin: 0,
     gap: '10px',
   };
-  
+
 export const DefaultTypographyItem={
     fontFamily:'Inter',
     fontStyle:'normal',
