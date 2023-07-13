@@ -1,26 +1,26 @@
-import useStyles from "./NavMenu.styles";
+import useStyles from './NavMenu.styles';
 const NavMenu = () => {
   const classes = useStyles();
   return (
     <nav className={classes.wrapper}>
       <ul>
         <li>
-          <a to="/">Inicio</a>
+          <a href='/'>Inicio</a>
         </li>
         <li>
-          <a to="/">Pedidos</a>
+          <a href='/'>Pedidos</a>
         </li>
         <li>
-          <a to="/">Clientes</a>
+          <a href='/'>Clientes</a>
         </li>
         <li>
-          <a to="/">Promociones</a>
+          <a href='/'>Promociones</a>
         </li>
         <li>
-          <a to="/">Opiniones</a>
+          <a href='/'>Opiniones</a>
         </li>
         <li>
-          <a to="/">Configuracion</a>
+          <a href='/'>Configuracion</a>
         </li>
       </ul>
     </nav>

@@ -1,10 +1,11 @@
-import Theme from "./Theme/Theme";
-import NavMenu from "./ui/components/navMenu/NavMenu";
 import ListProducts from "./ui/components/ListaProductos/ListProducts";
+import Theme from './Theme/Theme';
+import TableComponent from './ui/components/listClients/TableComponent';
+
 function App() {
   return (
     <Theme>
-      {/*NavMenu />*/}
+      <TableComponent/>
       <ListProducts/>
     </Theme>
   );

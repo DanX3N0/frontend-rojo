@@ -1,0 +1,27 @@
+{
+   "category": {
+      "tittle": "Categoria",
+      "labels": [
+         "Mujer",
+         "Hombre",
+         "Todos"
+      ]
+   },
+   "material": {
+      "tittle": "Material",
+      "labels": [
+         "Metals",
+         "Plastic",
+         "Glass",
+         "Ceramic",
+         "Minerals"
+      ]
+   },
+   "stock": {
+      "tittle": "Stock",
+      "labels": [
+         "Disponible",
+         "Agotado"
+      ]
+   }
+}

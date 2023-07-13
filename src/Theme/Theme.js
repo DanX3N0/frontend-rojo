@@ -1,37 +1,49 @@
-//import { createTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
 import { ThemeProvider,CssBaseline,createTheme} from "@mui/material";
-
-import Inter from "../assets/fonts/Inter-Regular.ttf";
-import Poppins from "../assets/fonts/Poppins-Regular.ttf";
+import { createTheme, CssBaseline, ThemeProvider } from '@material-ui/core';
+import Inter from '../assets/fonts/Inter-Regular.ttf';
+import Poppins from '../assets/fonts/Poppins-Regular.ttf';
+import AllertaStencil from '../assets/fonts/AllertaStencil-Regular.ttf'
 import "@fontsource/inter/400.css";
 import "@fontsource/allerta-stencil/400.css";
 import "@fontsource/quicksand"
 import "@fontsource/poppins";
 
 const InterRegular = {
-  fontFamily: "Inter-Regular",
-  fontStyle: "normal",
+  fontFamily: 'Inter-Regular',
+  fontStyle: 'normal',
   fontWeight: 100,
   src: `url(${Inter})`,
 };
 const InterBold = {
-  fontFamily: "Inter-Bold",
-  fontStyle: "normal",
+  fontFamily: 'Inter-Bold',
+  fontStyle: 'normal',
   fontWeight: 700,
   src: `url(${Inter})`,
 };
 
 const PoppinsRegular = {
-  fontFamily: "Poppins-Regular",
-  fontStyle: "normal",
+  fontFamily: 'Poppins-Regular',
+  fontStyle: 'normal',
   fontWeight: 100,
   src: `url(${Poppins})`,
 };
 const PoppinsBold = {
-  fontFamily: "Poppins-Bold",
-  fontStyle: "normal",
+  fontFamily: 'Poppins-Bold',
+  fontStyle: 'normal',
   fontWeight: 700,
   src: `url(${Poppins})`,
+};
+const AllertaStencilRegular = {
+  fontFamily: 'AllertaStencil-Regular',
+  fontStyle: 'normal',
+  fontWeight: 100,
+  src: `url(${AllertaStencil})`,
+};
+const AllertaStencilBold = {
+  fontFamily: 'AllertaStencil-Bold',
+  fontStyle: 'normal',
+  fontWeight: 700,
+  src: `url(${AllertaStencil})`,
 };
 const theme = createTheme({
   typography: {
@@ -98,20 +110,25 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#FFFFFF",
-      light: "#F1F0F0",
-      dark: "#898C81",
-      contrastText: "#FD3939",
+      main: '#FFFFFF',
+      light: '#F1F0F0',
+      dark: '#898C81',
+      contrastText: '#FD3939',
     },
     secondary: {
-      main: "#FFFFFF",
-      light: "#F1F0F0",
-      dark: "#898C81",
-      contrastText: "#64D148",
+      main: '#FFFFFF',
+      light: '#F1F0F0',
+      dark: '#898C81',
+      contrastText: '#64D148',
+    },
+    tertiary:{
+      main: '#F3F6F9',
+      light: '#F1F0F0',
+      dark: '#5F5F5F',
     },
     common: {
-      black: "#000",
-      white: "#fff",
+      black: '#000',
+      white: '#fff',
     },
     header:{
       search:'#BFBFBF',
@@ -136,13 +153,13 @@ const theme = createTheme({
   },
   overrides: {
     MuiCssBaseline: {
-      "@global": {
-        "@font-face": [PoppinsRegular, PoppinsBold, InterRegular, InterBold],
+      '@global': {
+        '@font-face': [PoppinsRegular, PoppinsBold, InterRegular, InterBold, AllertaStencilRegular, AllertaStencilBold],
       },
       body: {
-        fontFamily: ["PoppinsRegular"],
+        fontFamily: ['PoppinsRegular'],
       },
-      "h1, h2, h3, h4, h5, h6": {
+      'h1, h2, h3, h4, h5, h6': {
         margin: 0,
         padding: 0,
       },
