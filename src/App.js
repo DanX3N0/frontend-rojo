@@ -9,17 +9,25 @@ import Theme from './Theme/Theme';
 import NavMenu from './ui/components/navMenu/NavMenu';
 import Form from './ui/components/formClient/Form';
 
+import InfoFacSend from "./ui/components/infoFacSend/InfoFacSend";
+import SendInitialOrder from "./ui/components/sendInitialOrder/SendInitialOrder";
+import OptSend from "./ui/components/optSend/OptSend";
+import ConfirmOrder from "./ui/components/confirmOrder/ConfirmOrder";
 
 function App() {
   return (
     <Theme>
-      <TableComponent/>
+      /*<TableComponent/>
       <ListProducts/>
       <NavMenu />
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
         <Form/>
       </div>
-      <OpinionDetailEdit/>
+      <OpinionDetailEdit/>*/
+      <SendInitialOrder />
+      <OptSend />
+      <InfoFacSend />
+      <ConfirmOrder />
     </Theme>
   );
 }
