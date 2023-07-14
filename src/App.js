@@ -1,13 +1,6 @@
 import ListProducts from "./ui/components/ListaProductos/ListProducts";
 import Theme from './Theme/Theme';
 import TableComponent from './ui/components/listClients/TableComponent';
-
-function App() {
-  return (
-    <Theme>
-      <TableComponent/>
-      <ListProducts/>
-import Theme from "./Theme/Theme";
 import NavMenu from "./ui/components/navMenu/NavMenu";
 import FormClient from "./ui/components/formClient/FormClient";
 import FormDirect from "./ui/components/formClient/FormDirect";
@@ -16,14 +9,17 @@ import Theme from './Theme/Theme';
 import NavMenu from './ui/components/navMenu/NavMenu';
 import Form from './ui/components/formClient/Form';
 
+
 function App() {
   return (
     <Theme>
+      <TableComponent/>
+      <ListProducts/>
       <NavMenu />
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
         <Form/>
       </div>
-
+      <OpinionDetailEdit/>
     </Theme>
   );
 }
