@@ -4,20 +4,20 @@ import useStyles from './formFact.style';
 const FormFact = () => {
   const classes = useStyles();
 
-  const [factura, setFactura] = useState({
-    pais: '',
-    ciudad: '',
-    provincia: '',
-    codigoP: '',
-    direccion: ''
+  const [invoice, setInvoice] = useState({
+    country: '',
+    city: '',
+    province: '',
+    postalCode: '',
+    address: ''
   });
 
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFactura((prevFactura) => ({
-      ...prevFactura,
+    setInvoice((prevInvoice) => ({
+      ...prevInvoice,
       [name]: value,
     }));
   };
@@ -26,10 +26,10 @@ const FormFact = () => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
-      console.log(factura);
-      // Aquí puedes realizar alguna acción con los datos de la factura, como guardarlos en una base de datos.
+      console.log(invoice);
+      
     } else {
-      console.log("Errores de validación:", validationErrors);
+      console.log("Validation Errors:", validationErrors);
       setErrors(validationErrors);
     }
   };
@@ -37,20 +37,20 @@ const FormFact = () => {
   const validateForm = () => {
     let errors = {};
 
-    if (!factura.pais) {
-      errors.pais = "El país es obligatorio.";
+    if (!invoice.country) {
+      errors.country = "The country is required.";
     }
-    if (!factura.ciudad) {
-      errors.ciudad = "La ciudad es obligatoria.";
+    if (!invoice.city) {
+      errors.city = "The city is required.";
     }
-    if (!factura.provincia) {
-      errors.provincia = "La provincia es obligatoria.";
+    if (!invoice.province) {
+      errors.province = "The province is required.";
     }
-    if (!factura.codigoP) {
-      errors.codigoP = "El código postal es obligatorio.";
+    if (!invoice.postalCode) {
+      errors.postalCode = "The postal code is required.";
     }
-    if (!factura.direccion) {
-      errors.direccion = "La dirección es obligatoria.";
+    if (!invoice.address) {
+      errors.address = "The address is required.";
     }
 
     return errors;
@@ -58,65 +58,66 @@ const FormFact = () => {
 
   return (
     <div className={classes.wrapper}>
-      <h2>Direccion de facturacion</h2>
-    <form onSubmit={handleSubmit} className={classes.form} >
+      <h2>Billing Address</h2>
+    <form onSubmit={handleSubmit} >
+    <div className={classes.form}>
       <label className={classes.label}>
-        País:
+        Country:
         <input className={classes.input}
           type="text"
-          name="pais"
-          value={factura.pais}
+          name="country"
+          value={invoice.country}
           onChange={handleChange}
           required
-          placeholder="Pais"
+          placeholder="Country"
         />
       </label>
 
       <label className={classes.label}>
-        Ciudad:
+        City:
         <input className={classes.input}
           type="text"
-          name="ciudad"
-          value={factura.ciudad}
+          name="city"
+          value={invoice.city}
           onChange={handleChange}
           required
-          placeholder="Ciudad"
+          placeholder="City"
         />
       </label>
 
       <label className={classes.label}>
-        Provincia:
+        Province:
         <input className={classes.input}
           type="text"
-          name="provincia"
-          value={factura.provincia}
+          name="province"
+          value={invoice.province}
           onChange={handleChange}
           required
-          placeholder="Provincia"
+          placeholder="Province"
         />
       </label>
 
       <label className={classes.label}>
-        Código Postal:
+        Postal Code:
         <input className={classes.input}
           type="text"
-          name="codigoP"
-          value={factura.codigoP}
+          name="postalCode"
+          value={invoice.postalCode}
           onChange={handleChange}
           required
-          placeholder="Codigo postal"
+          placeholder="Postal code"
         />
       </label>
-
+      </div>
       <label className={classes.label}>
-        Dirección:
+        Address:
         <input className={classes.input}
           type="text"
-          name="direccion"
-          value={factura.direccion}
+          name="address"
+          value={invoice.address}
           onChange={handleChange}
           required
-          placeholder="Direccion"
+          placeholder="Address"
         />
       </label>
 

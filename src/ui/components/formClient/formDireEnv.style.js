@@ -5,7 +5,6 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
     backgroundColor: theme.palette.primary.main,
     fontFamily: "Inter-Regular",
     [mq("xxs")]: {
@@ -16,37 +15,37 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
       height: "100%",
     },
-    border: "1px solid #000",
+    border: `1px solid ${theme.palette.borderColor.border}`,
     borderRadius: "10px",
-    padding: "10px",
+    padding: "5px",
   },
   label: {
     display: "flex",
     flexDirection: "column",
     flex: "1 1 100%",
-    marginRight: '80px',
+    margin: '5px',
   },
 
   input: {
-    width: "100%", // Asegura que los inputs ocupen el ancho completo del contenedor
-    padding: "8px", // Ajusta el padding para dar espacio entre los inputs y el borde del contenedor
-    borderRadius: "4px", // Agrega un borde redondeado a los inputs
-    border: "2px solid #ccc", // Añade un borde alrededor de los inputs
+    width: "100%", 
+    padding: "8px",
+    borderRadius: "4px",
+    border: `2px solid ${theme.palette.borderColor.green}`,
     margin: "4px 0",
   },
-  fila: {
+  row: {
     display: 'flex',
-    
-    
   },
   
   titleContainer: {
     display: "flex",
-    alignItems: "center",
-    flexGrow: 1,
+    justifyContent: "space-between",
+    alignItems: "center",    
   },
   checkboxLabel: {
-    justifyContent: "flex-end",  
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-end"
   },
 }));
 

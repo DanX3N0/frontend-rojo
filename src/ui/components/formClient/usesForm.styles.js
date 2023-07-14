@@ -6,25 +6,27 @@ const useForm = makeStyles((theme) => ({
   wrapper: {
     display: "flex",
     alignContent: "center",
+    justifyContent: "center",
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: theme.palette.primary.main,
     fontFamily: "Inter-Regular",
     [mq("xxs")]: {
-      width: "100%",
-      height: "100%",
+      width: "%",
+      height: "%",
     },
     [mq("md")]: {
-      width: "100%",
-      height: "100%",
+      width: "%",
+      height: "%",
     },
-    border: "1px solid #000",
-    borderRadius: "10px",
+    border: `1px solid ${theme.palette.borderColor.border}`,
+    borderRadius: "5px",
   },
   
   container: {
     display: "flex",
     alignItems: "center",
+    justifyContent: "center", 
     [mq("sm")]: {
       flexDirection: "column",
     },
@@ -40,9 +42,9 @@ const useForm = makeStyles((theme) => ({
     flexDirection: "column",
   },
     square: {
-    backgroundColor: "#fff",
+    backgroundColor: theme.palette.common.white,
     borderRadius: "5px",    
-    margin: "5px", // Ajusta el espaciado entre los cuadrados
+    margin: "5px", 
     
   },
 }));

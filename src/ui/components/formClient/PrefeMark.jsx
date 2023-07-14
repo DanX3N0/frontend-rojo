@@ -1,18 +1,17 @@
-
 import useStyles from './formPrefeMar.style';
 import React, { useState } from 'react';
 
 function PreferenceMark() {
   const classes = useStyles();
 
-  const [etiquetasSeleccionadas, setEtiquetasSeleccionadas] = useState([]);
+  const [selectedTags, setSelectedTags] = useState([]);
   const [errors, setErrors] = useState({});
 
-  const handleEtiquetaSeleccionada = (etiqueta) => {
-    if (etiquetasSeleccionadas.includes(etiqueta)) {
-      setEtiquetasSeleccionadas(etiquetasSeleccionadas.filter((e) => e !== etiqueta));
+  const handleTagSelection = (tag) => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags(selectedTags.filter((t) => t !== tag));
     } else {
-      setEtiquetasSeleccionadas([...etiquetasSeleccionadas, etiqueta]);
+      setSelectedTags([...selectedTags, tag]);
     }
   };
 
@@ -20,10 +19,10 @@ function PreferenceMark() {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
-      console.log("Etiquetas seleccionadas:", etiquetasSeleccionadas);
-      // Aquí puedes realizar alguna acción con las etiquetas seleccionadas, como guardarlas en una base de datos.
+      console.log("Selected tags:", selectedTags);
+
     } else {
-      console.log("Errores de validación:", validationErrors);
+      console.log("Validation Errors:", validationErrors);
       setErrors(validationErrors);
     }
   };
@@ -31,9 +30,8 @@ function PreferenceMark() {
   const validateForm = () => {
     let errors = {};
 
-    // Realiza la validación de acuerdo a tus requisitos
-    if (etiquetasSeleccionadas.length === 0) {
-      errors.etiquetas = "Debes seleccionar al menos una etiqueta.";
+    if (selectedTags.length === 0) {
+      errors.tags = "You must select at least one tag.";
     }
 
     return errors;
@@ -41,64 +39,64 @@ function PreferenceMark() {
 
   return (
     <div className={classes.wrapper}>
-        <h2>Preferencias de Marketing</h2>
+        <h2>Marketing Preferences</h2>
       <div className={classes.containerSelc}>
       <label className={classes.checkboxLabel}>
         <input
           type="checkbox"
-          checked={etiquetasSeleccionadas.includes('folletos')}
-          onChange={() => handleEtiquetaSeleccionada('folletos')}
+          checked={selectedTags.includes('brochures')}
+          onChange={() => handleTagSelection('brochures')}
         />
-        Folletos
+        Brochures
       </label>
       <label className={classes.checkboxLabel}>
         <input
           type="checkbox"
-          checked={etiquetasSeleccionadas.includes('email')}
-          onChange={() => handleEtiquetaSeleccionada('email')}
+          checked={selectedTags.includes('email')}
+          onChange={() => handleTagSelection('email')}
         />
         Email
-      </label >
-      <label className={classes.checkboxLabel}>
-        <input
-          type="checkbox"
-          checked={etiquetasSeleccionadas.includes('descuentos')}
-          onChange={() => handleEtiquetaSeleccionada('descuentos')}
-        />
-        Descuentos
       </label>
       <label className={classes.checkboxLabel}>
         <input
           type="checkbox"
-          checked={etiquetasSeleccionadas.includes('publicidad')}
-          onChange={() => handleEtiquetaSeleccionada('publicidad')}
+          checked={selectedTags.includes('discounts')}
+          onChange={() => handleTagSelection('discounts')}
         />
-        Publicidad
+        Discounts
       </label>
       <label className={classes.checkboxLabel}>
         <input
           type="checkbox"
-          checked={etiquetasSeleccionadas.includes('promociones')}
-          onChange={() => handleEtiquetaSeleccionada('promociones')}
+          checked={selectedTags.includes('advertising')}
+          onChange={() => handleTagSelection('advertising')}
         />
-        Promociones
+        Advertising
       </label>
       <label className={classes.checkboxLabel}>
         <input
           type="checkbox"
-          checked={etiquetasSeleccionadas.includes('cupones')}
-          onChange={() => handleEtiquetaSeleccionada('cupones')}
+          checked={selectedTags.includes('promotions')}
+          onChange={() => handleTagSelection('promotions')}
         />
-        Cupones
+        Promotions
+      </label>
+      <label className={classes.checkboxLabel}>
+        <input
+          type="checkbox"
+          checked={selectedTags.includes('coupons')}
+          onChange={() => handleTagSelection('coupons')}
+        />
+        Coupons
       </label>
 
       </div>  
       <div className={classes.buttonContainer}>
       <button className={`${classes.button} ${classes.saveButton}`} type="submit">
-        Guardar cambios
+        Save Changes
       </button>
       <button className={`${classes.button} ${classes.cancelButton}`} type="button">
-        Cancelar
+        Cancel
       </button>
       </div>
     </div>

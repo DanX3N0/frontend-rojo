@@ -5,11 +5,11 @@ const FormDirect = () => {
   const classes = useStyles();
 
   const [envio, setEnvio] = useState({
-    pais: '',
-    ciudad: '',
-    provincia: '',
-    direccionUno: '',
-    direccionDos: ''
+    country: '',
+    city: '',
+    province: '',
+    addressOne: '',
+    addressTwo: ''
   });
 
   const [errors, setErrors] = useState({});
@@ -27,9 +27,9 @@ const FormDirect = () => {
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
       console.log(envio);
-      // Aquí puedes realizar alguna acción con los datos de envío, como guardarlos en una base de datos.
+      // You can perform some action with the shipping data here, like saving it to a database.
     } else {
-      console.log("Errores de validación:", validationErrors);
+      console.log("Validation Errors:", validationErrors);
       setErrors(validationErrors);
     }
   };
@@ -37,109 +37,114 @@ const FormDirect = () => {
   const validateForm = () => {
     let errors = {};
 
-    if (!envio.pais) {
-      errors.pais = "El país es obligatorio.";
+    if (!envio.country) {
+      errors.country = "The country is required.";
     }
-    if (!envio.ciudad) {
-      errors.ciudad = "La ciudad es obligatoria.";
+    if (!envio.city) {
+      errors.city = "The city is required.";
     }
-    if (!envio.provincia) {
-      errors.provincia = "La provincia es obligatoria.";
+    if (!envio.province) {
+      errors.province = "The province is required.";
     }
-    if (!envio.codigoP) {
-      errors.codigoP = "La dirección 1 es obligatoria.";
+    if (!envio.addressOne) {
+      errors.addressOne = "Address 1 is required.";
     }
 
     return errors;
   };
 
-  const [etiquetasSeleccionadas, setEtiquetasSeleccionadas] = useState([]);
+  const [selectedTags, setSelectedTags] = useState([]);
 
-  const handleEtiquetaSeleccionada = (etiqueta) => {
-    if (etiquetasSeleccionadas.includes(etiqueta)) {
-      setEtiquetasSeleccionadas(etiquetasSeleccionadas.filter((e) => e !== etiqueta));
+  const handleTagSelection = (tag) => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags(selectedTags.filter((t) => t !== tag));
     } else {
-      setEtiquetasSeleccionadas([...etiquetasSeleccionadas, etiqueta]);
+      setSelectedTags([...selectedTags, tag]);
     }
   };
 
   return (
     <div className={classes.wrapper}>
-    <div className={classes.titleContainer}>
-      <h2>Direccion de envio</h2>
-      <label className={classes.checkboxLabel}>
-        <input
-          type="checkbox"
-          checked={etiquetasSeleccionadas.includes('cupones')}
-          onChange={() => handleEtiquetaSeleccionada('cupones')}
-        />
-        Usar direccion de envio
+      <div className={classes.titleContainer}>
+        <h2>Shipping Address</h2>
+        <label className={classes.checkboxLabel}>
+          <input 
+            type="checkbox"
+            checked={selectedTags.includes('coupons')}
+            onChange={() => handleTagSelection('coupons')}
+          />
+          Use billing address
         </label>
-    </div>
-    <form onSubmit={handleSubmit}  >
-      <div className={classes.fila}>
-      <label className={classes.label}>
-        País:
-        <input className={classes.input}
-          type="text"
-          name="pais"
-          value={envio.pais}
-          onChange={handleChange}
-          required
-          placeholder="Pais"
-        />
-      </label>
-
-      <label className={classes.label}>
-        Ciudad:
-        <input className={classes.input}
-          type="text"
-          name="ciudad"
-          value={envio.ciudad}
-          onChange={handleChange}
-          required
-          placeholder="Ciudad"
-        />
-      </label>
-
-      <label className={classes.label}>
-        Provincia:
-        <input className={classes.input}
-          type="text"
-          name="provincia"
-          value={envio.provincia}
-          onChange={handleChange}
-          required
-          placeholder="Provincia"
-        />
-      </label>
       </div>
+      <form onSubmit={handleSubmit}>
+        <div className={classes.row}>
+          <label className={classes.label}>
+            Country:
+            <input
+              className={classes.input}
+              type="text"
+              name="country"
+              value={envio.country}
+              onChange={handleChange}
+              required
+              placeholder="Country"
+            />
+          </label>
 
-      <label className={classes.label}>
-        direccion 1:
-        <input className={classes.input}
-          type="text"
-          name="codigoP"
-          value={envio.codigoP}
-          onChange={handleChange}
-          required
-          placeholder="Direccion"
-        />
-      </label>
+          <label className={classes.label}>
+            City:
+            <input
+              className={classes.input}
+              type="text"
+              name="city"
+              value={envio.city}
+              onChange={handleChange}
+              required
+              placeholder="City"
+            />
+          </label>
 
-      <label className={classes.label}>
-        Dirección 2 opcional:
-        <input className={classes.input}
-          type="text"
-          name="direccion"
-          value={envio.direccion}
-          onChange={handleChange}
-          required
-          placeholder="Direccion"
-        />
-      </label>
+          <label className={classes.label}>
+            Province:
+            <input
+              className={classes.input}
+              type="text"
+              name="province"
+              value={envio.province}
+              onChange={handleChange}
+              required
+              placeholder="Province"
+            />
+          </label>
+        </div>
 
-        </form>
+        <label className={classes.label}>
+          Address 1:
+          <input
+            className={classes.input}
+            type="text"
+            name="addressOne"
+            value={envio.addressOne}
+            onChange={handleChange}
+            required
+            placeholder="Address"
+          />
+        </label>
+
+        <label className={classes.label}>
+          Address 2 (optional):
+          <input
+            className={classes.input}
+            type="text"
+            name="addressTwo"
+            value={envio.addressTwo}
+            onChange={handleChange}
+            required
+            placeholder="Address"
+          />
+        </label>
+
+      </form>
     </div>
   );
 };
