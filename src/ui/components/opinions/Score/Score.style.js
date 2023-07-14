@@ -3,18 +3,18 @@ import mq from '../../../../config/mq';
 
 const useStyles = makeStyles((theme) => ({
     stars: {
-        display: "flex",
-        justifyContent: "space-between",
-        [mq("xxs")]: {
-            width: "100%"
+        display: 'flex',
+        justifyContent: 'space-between',
+        [mq('xxs')]: {
+            width: '100%'
         },
-        [mq("md")]: {
-            width: "100%"
+        [mq('md')]: {
+            width: '100%'
         },
 
     },
     star:{
-        color: "#ffa800"
+        color: '#ffa800'
     },
 
 }));

@@ -1,6 +1,13 @@
-import { createTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
-import Inter from "../assets/fonts/Inter-Regular.ttf";
-import Poppins from "../assets/fonts/Poppins-Regular.ttf";
+import { ThemeProvider,CssBaseline,createTheme} from "@mui/material";
+import { createTheme, CssBaseline, ThemeProvider } from '@material-ui/core';
+import Inter from '../assets/fonts/Inter-Regular.ttf';
+import Poppins from '../assets/fonts/Poppins-Regular.ttf';
+import AllertaStencil from '../assets/fonts/AllertaStencil-Regular.ttf'
+import '@fontsource/inter/400.css';
+import '@fontsource/allerta-stencil/400.css';
+import '@fontsource/quicksand'
+import '@fontsource/poppins';
+
 const InterRegular = {
   fontFamily: "Inter-Regular",
   fontStyle: "normal",
@@ -39,26 +46,26 @@ const AllertaStencilBold = {
   src: `url(${AllertaStencil})`,
 };
 const DMSansRegular ={
-  fontFamily: "DMSans-Regular",
-  fontStyle: "normal",
+  fontFamily: 'DMSans-Regular',
+  fontStyle: 'normal',
   fontWeight: 100,
   src: `url(${DMSans})`
 };
 const DMSansBold ={
-  fontFamily: "DMSans-Bold",
-  fontStyle: "normal",
+  fontFamily: 'DMSans-Bold',
+  fontStyle: 'normal',
   fontWeight: 700,
   src: `url(${DMSansM})`
 };
 const AlatsiRegular = {
-  fontFamily: "Alatsi-Regular",
-  fontStyle: "normal",
+  fontFamily: 'Alatsi-Regular',
+  fontStyle: 'normal',
   fontWeight: 100,
   src: `url(${Alatsi})`
 };
 const AlatsiBold = {
-  fontFamily: "Alatsi-Bold",
-  fontStyle: "normal",
+  fontFamily: 'Alatsi-Bold',
+  fontStyle: 'normal',
   fontWeight: 700,
   src: `url(${Alatsi})`
 };
